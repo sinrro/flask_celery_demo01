@@ -4,6 +4,8 @@ from app import create_app
 
 app = create_app('default')
 
+from app import celery
+# celery -A manage.celery worker --loglevel=info
 
 def make_shell_context():
     return dict(app=app)
